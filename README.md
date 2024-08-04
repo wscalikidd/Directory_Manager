@@ -3,7 +3,11 @@
 
 This project is a Java implemented Directory Manager simulator program on a terminal.
 
-To run download the project into a folder on your computer. Then naviagate to the folder. To run, enter command: java .\DirectoryManager.java
+To run download the project into a folder on your computer. Then naviagate to the folder. To run, enter command: 
+```java
+java .\DirectoryManager.java
+```
+
 A user is then presented with a menu of options to run the program. 
 
 The program contains these important methods/functions:
