@@ -8,7 +8,8 @@ To run download the project into a folder on your computer. Then naviagate to th
 java .\DirectoryManager.java
 ```
 
-A user is then presented with a menu of options to run the program. 
+A user is then presented with a menu of options to run the program.
+
 ![Screenshot of initial program options menu.](/assets/images/menu.PNG)
 
 The program contains these important methods/functions:
