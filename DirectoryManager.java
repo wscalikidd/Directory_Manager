@@ -2,7 +2,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-
 /**
  * DirectoryManager
  */
@@ -18,20 +17,21 @@ public class DirectoryManager {
     }
 
     private static Directory root = new Directory("/");
-    private static Scanner scan = new Scanner(System.in);
+   
 
     public static void main(String[] args) {
-        DirectoryManager.createDirectory("fruits/apples/fiji");
-        DirectoryManager.createDirectory("fruits/oranges/naval");
-        DirectoryManager.createDirectory("fruits/apples/granny");
-        DirectoryManager.createDirectory("veggies/carrots");
-        DirectoryManager.moveDirectory("fruits/apples", "tmp");
-        DirectoryManager.listDirectories();
+        //Quick Setup Test
+        // DirectoryManager.createDirectory("fruits/apples/fiji");
+        // DirectoryManager.createDirectory("fruits/oranges/naval");
+        // DirectoryManager.createDirectory("fruits/apples/granny");
+        // DirectoryManager.createDirectory("veggies/carrots");
+        // DirectoryManager.moveDirectory("fruits/apples", "tmp");
+        // DirectoryManager.listDirectories();
        executeCommands();
     }
 
     private static void executeCommands()  {
-       
+        Scanner scan = new Scanner(System.in);
         int input;
 
         while (true) {
@@ -39,7 +39,6 @@ public class DirectoryManager {
             System.out.println("1. List Directories\n2. Create A Directory\n3. Move A Directory\n4. Delete A Directory\n5. Exit");
             System.out.print("Enter your choice: ");
             input =  scan.nextInt();
-
             switch (input) {
                 case 1: 
                     listDirectories();
@@ -62,6 +61,7 @@ public class DirectoryManager {
                     deleteDirectory(removeDirectory.trim());
                     break;
                 case 5: 
+                    scan.close();
                     exitMenu();
                     break;
                 default:
@@ -108,7 +108,7 @@ public class DirectoryManager {
         }
         else {
             deleteDirectory(moveFrom);
-            System.out.println("It was moved to under " + dirInto);
+            //System.out.println("It was moved to under " + dirInto);
         }
     }
 
@@ -131,7 +131,7 @@ public class DirectoryManager {
             if(current.subdirectories.containsKey(dirToDelete)) {
                 current.subdirectories.remove(dirToDelete);
                 deleted = true;
-                System.out.println("The Directory " + dirToDelete + " was deleted");
+                //System.out.println("The Directory " + dirToDelete + " was deleted");
                 break;
             }
             current = current.subdirectories.get(dir);
@@ -160,7 +160,6 @@ public class DirectoryManager {
             listDirectories(current.subdirectories.get(dir), depth + 1);
         }
     }
-
 
     private static void exitMenu() {
         System.out.println("Exiting the Directory Manager Program.");
