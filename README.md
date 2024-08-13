@@ -1,7 +1,7 @@
 
-# EndPoint Challenge
+# Java Directory Manager
 
-This project is a Java implemented Directory Manager simulator program on a terminal.
+This project is a Java implemented Directory Manager simulator program on a terminal. Code written in Java version 11 LTS.  
 
 To run download the project into a folder on your computer. Then naviagate to the folder. To run, enter command: 
 ```java
